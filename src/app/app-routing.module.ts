@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'geolocation',
+    loadChildren: () => import('./geolocation/geolocation.module').then( m => m.GeolocationPageModule)
+  }
 ];
 
 @NgModule({
